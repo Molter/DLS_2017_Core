@@ -30,13 +30,13 @@ namespace DLS_2017.Models
         public string PresetationSubject { get; set; }
 
         [Required(ErrorMessage = "Campo Detalhes é Obrigatório")]
-        [Display(Name = "Detalhes")]
-        [StringLength(255)]
+        [Display(Name = "Detalhes da Palestra")]
+        [StringLength(2000)]
         public string PresetationDetails { get; set; }
 
         [Required(ErrorMessage = "Campo Currículo é Obrigatório")]
         [Display(Name = "Currículo")]
-        [StringLength(255)]
+        [StringLength(2000)]
         public string SpeakerDetails { get; set; }
         public string Photo { get; set; }
         public string Linkedin { get; set; }
@@ -46,7 +46,7 @@ namespace DLS_2017.Models
         public string GPlus { get; set; }
 
         [Required(ErrorMessage = "Campo Telefone é Obrigatório")]
-        [Display(Name = "Título")]
+        [Display(Name = "Telefone")]
         [StringLength(80)]
         public string Phone{ get; set; }
 

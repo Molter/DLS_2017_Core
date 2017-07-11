@@ -7,17 +7,30 @@ namespace DLS_2017.Models
 {
     public class ParticipantRepository : IParticipantRepository
     {
+        public AppDbContext _appDbContext { get; private set; }
 
-        public IEnumerable<Participant> Participants => throw new NotImplementedException();
+        public ParticipantRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
+
+        public IEnumerable<Participant> Participants { get {
+                return _appDbContext.Participants;
+        } }
 
         public void AddParticipant(Participant part)
         {
-            throw new NotImplementedException();
+            _appDbContext.Participants.Add(part);
+            _appDbContext.SaveChanges();
+
         }
 
         public Participant RaffleItem()
         {
-            throw new NotImplementedException();
+            Random random = new Random();
+            var list = this.Participants.ToList();
+            int start2 = random.Next(0, list.Count);
+            return list.ToArray()[start2];
         }
     }
 }

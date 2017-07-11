@@ -6,7 +6,7 @@
         <div class="navbar-header">
             <!-- logo -->
             <div class="site-branding">
-                <a class="logo" href="index.html">
+                <a class="logo" href="/home/index">
 
                     <!-- logo image  -->
                     <img src="~/images/logo.jpg" alt="Logo">
@@ -68,12 +68,14 @@
                         <span asp-validation-for="PresetationSubject" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input asp-for="PresetationDetails" class="form-control" placeholder="Descrição da Palestra" />
+                        
+                        <textarea asp-for="PresetationDetails" class="form-control-area"rows="5" cols="70"  placeholder="Detalhes da Palestra"></textarea>
                         <span asp-validation-for="PresetationDetails" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <input asp-for="SpeakerDetails" class="form-control" placeholder="Minu Curriculo" />
+                        
+                        <textarea asp-for="SpeakerDetails" class="form-control-area" rows="5" cols="70" placeholder="Mini Currículo"></textarea>
                         <span asp-validation-for="SpeakerDetails" class="text-danger"></span>
                     </div>
                     <div class="form-group">
