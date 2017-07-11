@@ -1,0 +1,103 @@
+﻿@model DLS_2017.Models.Speaker
+
+
+<nav class="navbar navbar-fixed-top navbar-custom navbar-solid">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- logo -->
+            <div class="site-branding">
+                <a class="logo" href="index.html">
+
+                    <!-- logo image  -->
+                    <img src="~/images/logo.jpg" alt="Logo">
+                    Software Freedom Day - Novo Hamburgo 2017
+                </a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div><!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- navigation menu -->
+                <li class="active"><a data-scroll href="/Home">Sobre</a></li>
+                <li><a data-scroll href="/Home/Register">Registre-se</a></li>
+                <li><a data-scroll href="/Home/Index#speakers">Palestrantes</a></li>
+                <li><a data-scroll href="/Home/Index#schedule">Agenda</a></li>
+                <li><a data-scroll href="/Home/Index#partner">Parceiros</a></li>
+                <li><a data-scroll href="/Home/Index#faq">FAQ</a></li>
+                <li><a data-scroll href="/Home/Index#photos">Fotos</a></li>
+
+            </ul>
+        </div>
+    </div><!-- /.container -->
+</nav>
+<section id="registration" class="section registration">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Submeta seu Trabalho</h3>
+            </div>
+        </div>
+
+        <form asp-action="Speaker" method="post" class="form-horizontal" role="form" id="registration" asp-anti-forgery="true">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input asp-for="Name" class="form-control" placeholder="Nome Completo" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Phone" class="form-control" placeholder="(DDD)Telefone" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+
+                    
+
+                    <div class="form-group">
+                        <input asp-for="Email" class="form-control" placeholder="Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="PresetationSubject" class="form-control" placeholder="Título da Palestra" />
+                        <span asp-validation-for="PresetationSubject" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="PresetationDetails" class="form-control" placeholder="Descrição da Palestra" />
+                        <span asp-validation-for="PresetationDetails" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input asp-for="SpeakerDetails" class="form-control" placeholder="Minu Curriculo" />
+                        <span asp-validation-for="SpeakerDetails" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Linkedin" class="form-control" placeholder="LinkedIn" />
+                        <span asp-validation-for="Linkedin" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="FaceBook" class="form-control" placeholder="Facebook" />
+                        <span asp-validation-for="FaceBook" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="Twitter" class="form-control" placeholder="Twitter" />
+                        <span asp-validation-for="Twitter" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="GPlus" class="form-control" placeholder="Google Plus" />
+                        <span asp-validation-for="GPlus" class="text-danger"></span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text-center mt20">
+                <button type="submit" class="btn btn-black" id="registration-submit-btn">Registre-se</button>
+            </div>
+        </form>
+    </div>
+</section>

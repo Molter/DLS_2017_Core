@@ -1,0 +1,69 @@
+﻿@model DLS_2017.Models.Participant
+
+<nav  class="navbar navbar-fixed-top navbar-custom navbar-solid">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- logo -->
+            <div class="site-branding">
+                <a class="logo" href="index.html">
+
+                    <!-- logo image  -->
+                    <img src="~/images/logo.jpg" alt="Logo">
+                    Software Freedom Day - Novo Hamburgo 2017
+                </a>
+            </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div><!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="navbar-items">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- navigation menu -->
+                <li class="active"><a data-scroll href="/Home">Sobre</a></li>
+                <li><a data-scroll href="/Home/Register">Registre-se</a></li>
+                <li><a data-scroll href="/Home/Index#speakers">Palestrantes</a></li>
+                <li><a data-scroll href="/Home/Index#schedule">Agenda</a></li>
+                <li><a data-scroll href="/Home/Index#partner">Parceiros</a></li>
+                <li><a data-scroll href="/Home/Index#faq">FAQ</a></li>
+                <li><a data-scroll href="/Home/Index#photos">Fotos</a></li>
+
+            </ul>
+        </div>
+    </div><!-- /.container -->
+</nav>
+<section id="registration" class="section registration">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="section-title">Registre-se</h3>
+            </div>
+        </div>
+
+        <form asp-action="Register" method="post" class="form-horizontal" role="form" id="registration" asp-anti-forgery="true">
+                <div class="row">
+                    
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <input asp-for="Name" class="form-control" placeholder="Nome Completo" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input asp-for="Email" class="form-control"placeholder="Email"  />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="City" class="form-control" placeholder="Cidade" />
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt20">
+                    <button type="submit" class="btn btn-black" id="registration-submit-btn">Registre-se</button>
+                </div>
+            </form>
+    </div>
+</section>

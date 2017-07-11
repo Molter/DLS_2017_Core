@@ -1,0 +1,14 @@
+{
+  "name": "asp.net",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v3.3.5",
+    "jquery": "jQuery#2.1.4",
+    "Ionicons": "ionicons#v2.0.1",
+    "isotope": "v2.2.1",
+    "smooth-scroll.js": "v11.1.0"
+  },
+  "resolutions": {
+    "bootstrap": "v3.3.7"
+  }
+}
